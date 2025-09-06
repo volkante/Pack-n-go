@@ -20,7 +20,7 @@ export function Form({ onAddItems }) {
 
   return (
     <form className="add-form" onSubmit={handleSubmit}>
-      <h3>What do you need for your 😍 trip?</h3>
+      <h3>What do you need for your adventure?</h3>
       <select
         value={
           quantity
@@ -48,7 +48,7 @@ export function Form({ onAddItems }) {
         )}
       </select>
       <input
-        placeholder="Item..."
+        placeholder="Enter item here…"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       ></input>
