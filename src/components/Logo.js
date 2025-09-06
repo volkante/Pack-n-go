@@ -1,3 +1,3 @@
 export function Logo() {
-  return <h1> PACK N CAMP ⛺️ </h1>;
+  return <h1> PACK N CAMP 🏕️ </h1>;
 }

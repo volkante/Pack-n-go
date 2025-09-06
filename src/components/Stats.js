@@ -5,7 +5,7 @@ export function Stats({ items }) {
   if (!items.length)
     return (
       <footer className="stats">
-        <em> Start adding some items for your camp 🏕️</em>
+        <em> Start adding some items for your camp ⛺️</em>
       </footer>
     );
 
