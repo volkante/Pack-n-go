@@ -16,12 +16,10 @@ export function Stats({ items }) {
   /* bu üç değişken için  ayrı state'e gerek yok. Çünkü ilk state'den hesaplanabiliyor. Gereksiz re-render olur ayrı state. */
   return (
     <footer className="stats">
-      <em>
-        {percentage === 100
-          ? "You got everything! Ready to go 🚀"
-          : `🎒 You have ${numItems} items on your list, and you've already packed
+      {percentage === 100
+        ? "You got everything! Ready to go 🚀"
+        : `🎒 You have ${numItems} items on your list, and you've already packed
           ${numPacked} (${percentage}%)`}
-      </em>
     </footer>
   );
 }
