@@ -5,12 +5,11 @@ export function Stats({ items }) {
   if (!items.length)
     return (
       <footer className="stats">
-        <em> Start adding some items for your camp ⛺️</em>
+        Start adding some items for your camp ⛺️
       </footer>
     );
 
   const numItems = items.length;
-  // console.log(items);
   const numPacked = items.filter((item) => item.packed).length;
   const percentage = Math.round((numPacked / numItems) * 100);
   /* bu üç değişken için  ayrı state'e gerek yok. Çünkü ilk state'den hesaplanabiliyor. Gereksiz re-render olur ayrı state. */

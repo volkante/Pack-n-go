@@ -5,7 +5,7 @@ import { PackingList } from "./PackingList";
 import { Stats } from "./Stats";
 
 /* 
-Dummy data for beginning
+Dummy data for state at the beginning
 
 const initialItems = [
   { id: 1, description: "Passports", quantity: 2, packed: false },
