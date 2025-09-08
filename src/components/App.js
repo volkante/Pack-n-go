@@ -4,29 +4,25 @@ import { Form } from "./Form";
 import { PackingList } from "./PackingList";
 import { Stats } from "./Stats";
 
-/* const initialItems = [
+/* 
+Dummy data for beginning
+
+const initialItems = [
   { id: 1, description: "Passports", quantity: 2, packed: false },
   { id: 2, description: "Socks", quantity: 12, packed: true },
   { id: 3, description: "Charger", quantity: 1, packed: false },
-]; */
+]; 
+*/
 
 export default function App() {
   const [items, setItems] = useState([]);
 
   function handleAddItems(item) {
-    setItems((items) => [
-      ...items,
-      item,
-    ]); /* Burada items state'inin içiyle oynamadık. Çünkü stateler immutabledır.
-    O yüzden spread operatörü kullandık ve yeni bir array yarattık items'a dokunmadan. Items'ın içi boş olduğu için de 
-    sadece item elemanları girdi bu array'a. */
+    setItems((items) => [...items, item]);
   }
 
   function handleDeleteItem(id) {
-    setItems((items) =>
-      items.filter((item) => item.id !== id)
-    ); /* Items state'inin içindeki object array'inin içindeki objenin id'si
-    aşağıdaki delete button'a basınca gelen id ile eşleşmiyorsa filter ile o id'li objeleri yeni array'a al. Böylece state'i güncelle. */
+    setItems((items) => items.filter((item) => item.id !== id));
   }
 
   function handleToggleItem(id) {
