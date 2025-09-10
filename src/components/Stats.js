@@ -15,6 +15,17 @@ export function Stats({ items }) {
   /* bu üç değişken için  ayrı state'e gerek yok. Çünkü ilk state'den hesaplanabiliyor. Gereksiz re-render olur ayrı state. */
   return (
     <footer className="stats">
+      <div className="progress-container">
+        <div
+          className="progress-bar"
+          style={{
+            width: `${percentage}%`,
+            backgroundColor: percentage === 100 ? "#76c7ad" : "#e5771f",
+          }}
+        >
+          {percentage > 0 ? `${percentage}%` : ""}
+        </div>
+      </div>
       {percentage === 100
         ? "You got everything! Ready to go 🚀"
         : `🎒 You have ${numItems} items on your list, and you've already packed

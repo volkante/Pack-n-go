@@ -130,3 +130,26 @@ input[type="checkbox"] {
   font-weight: 700;
   padding: 3.2rem 0;
 }
+
+.progress-container {
+  width: 80%;
+  height: 2rem;
+  background-color: #ffebb3;
+  border-radius: 1rem;
+  margin: 0 auto 1.6rem auto;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  color: white;
+  border-radius: 1rem;
+  transition: width 0.3s ease;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
