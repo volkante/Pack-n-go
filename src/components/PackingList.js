@@ -13,7 +13,7 @@ export function PackingList({
   if (sortBy === "input") sortedItems = items;
   if (sortBy === "description")
     sortedItems = items
-      .slice() /* Slice ile kopyaladım çünkü sort orjinal arrayi yani items'ı değiştirir yoksa! */
+      .slice() /* Slice ile kopyaladım çünkü sort orjinal arrayi yani items'ı değiştiren bir arr methodu */
       .sort((a, b) => a.description.localeCompare(b.description));
   if (sortBy === "packed")
     sortedItems = items
