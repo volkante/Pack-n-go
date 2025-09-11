@@ -21,6 +21,7 @@ export function Stats({ items }) {
           style={{
             width: `${percentage}%`,
             backgroundColor: percentage === 100 ? "#76c7ad" : "#e5771f",
+            fontSize: percentage === 100 ? "inherit" : "1.4rem",
           }}
         >
           {percentage > 0 ? `${percentage}%` : ""}
