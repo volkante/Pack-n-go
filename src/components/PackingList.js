@@ -11,7 +11,7 @@ export function PackingList({
 
   let sortedItems;
   if (sortBy === "input") sortedItems = items;
-  if (sortBy === "description")
+  if (sortBy === "alphabetical")
     sortedItems = items
       .slice() /* Slice ile kopyaladım çünkü sort orjinal arrayi yani items'ı değiştiren bir arr methodu */
       .sort((a, b) => a.description.localeCompare(b.description));
@@ -37,7 +37,7 @@ export function PackingList({
       <div className="actions">
         <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
           <option value="input">SORT BY INPUT ORDER</option>
-          <option value="description">SORT BY DESCRIPTION</option>
+          <option value="alphabetical">SORT ALPHABETICALLY</option>
           <option value="packed">SORT BY PACKED STATUS</option>
         </select>
         {items.length > 0 && <button onClick={onResetItems}>Clear list</button>}

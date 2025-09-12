@@ -32,7 +32,7 @@ export function Form({ onAddItems }) {
           setQuantity(Number(e.target.value));
         }}
       >
-        {/* 20 sayılı bir array oluşturma ve ondan 20 tane options oluşturma map ile. Böyle bir metot var. */}
+        {/* 20 sayılı bir array oluşturma ve ondan 20 tane options oluşturma metodu. */}
         {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
           <option value={num} key={num}>
             {num}
