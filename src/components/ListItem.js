@@ -3,7 +3,7 @@ export function ListItem({ itemObj, onDeleteItem, onToggleItems }) {
     <li>
       <input
         type="checkbox"
-        value={itemObj.packed}
+        checked={itemObj.packed}
         onChange={() => {
           onToggleItems(itemObj.id);
         }}

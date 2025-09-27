@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Logo } from "./Logo";
 import { Form } from "./Form";
 import { PackingList } from "./PackingList";
@@ -15,7 +15,24 @@ const initialItems = [
 */
 
 export default function App() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(() => {
+    try {
+      const stored = localStorage.getItem("items");
+      const parsed = stored ? JSON.parse(stored) : [];
+      return parsed.map((it) => ({ ...it, packed: Boolean(it.packed) }));
+    } catch (err) {
+      console.error("Failed to parse items from localStorage:", err);
+      return [];
+    }
+  });
+
+  useEffect(() => {
+    try {
+      localStorage.setItem("items", JSON.stringify(items));
+    } catch (err) {
+      console.error("Failed to save items to localStorage:", err);
+    }
+  }, [items]);
 
   function handleAddItems(item) {
     setItems((items) => [...items, item]);
